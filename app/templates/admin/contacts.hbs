@@ -1,0 +1,10 @@
+<h2>contacts list</h2>
+
+{{#each model as |contact|}}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>Email: {{contact.email}}</p>
+      <p>Message: {{contact.message}}</p>
+    </div>
+  </div>
+{{/each}}
