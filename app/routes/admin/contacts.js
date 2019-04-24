@@ -5,14 +5,14 @@ export default Route.extend({
     return this.store.findAll('contact');
   },
 
-  // actions: {
-  // 
-  //   saveLibrary(newLibrary) {
-  //     newLibrary.save().then(() => this.transitionTo('contact'));
-  //   },
-  //
-  //   willTransition() {
-  //     this.controller.get('model').rollbackAttributes();
-  //   }
-  // }
+  actions: {
+
+  deleteContact(contact) {
+    let confirmation = confirm('Are you sure?');
+
+    if (confirmation) {
+      contact.destroyRecord();
+    }
+  }
+}
 });

@@ -5,6 +5,7 @@
     <div class="panel-body">
       <p>Email: {{contact.email}}</p>
       <p>Message: {{contact.message}}</p>
+      <button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button>
     </div>
   </div>
 {{/each}}
