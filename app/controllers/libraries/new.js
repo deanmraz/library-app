@@ -1,10 +1,9 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
-
-    saveLibrary(newLibrary) {
-      newLibrary.save().then(() => this.transitionTo('libraries'));
-    },
-
-
+  router: service(),
+  saveLibrary(newLibrary) {
+    newLibrary.save().then(() => this.get('router').transitionTo('libraries'));
+  },
 });
